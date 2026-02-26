@@ -9,7 +9,6 @@ melakukan askses penilaian tugas/ujian dan data siswa """
 # data collection 
 # data dummynya (nama, kelas, tanggal_registrasi(year), nama_ortu, no telp, jenis kelamin, dan alamat  )
 #==============================================================================================================================
-
 dict_data_siswa = {
     2001: {"nama":"Andi","kelas":"Kelas 10","tanggal_registrasi":"2025","nama_ortu":"Budi","no_telp":"0811","jenis_kelamin":"Laki-laki","alamat":"Jl. Cengkeh 1"},
     2002: {"nama":'Bela',"kelas":"Kelas 10","tanggal_registrasi":"2026","nama_ortu":"Mulyono","no_telp":"0812","jenis_kelamin":"Perempuan","alamat":"Jl. Cengkeh 2"},
@@ -238,8 +237,8 @@ def buat_tugas_baru(): #guru dapat membuat tugas atau ujian tambahan per mapelny
                 for id_siswa in dict_data_nilai.keys() : #buat nilai tugas baru 0 untuk semua siswa 
                     dict_data_nilai[id_siswa][pilih_mapel][nama_tugas_baru]= 0 
                 print(f"Berhasil! Tugas {nama_tugas_baru} berhasil ditambahkan")
-
 #================================================================================================
+
 # jika piih NO. 5 (membuat fungsi update_nilai_siswa) ---- function UPDATE 
 #================================================================================================
 def update_nilai_siswa() : #guru dapat mengupdate ataupun menginput nilai baru untuk tiap siswanya
@@ -280,7 +279,6 @@ def update_nilai_siswa() : #guru dapat mengupdate ataupun menginput nilai baru u
                     print("Data berhasil disimpan!")
         else:
             print("ID tidak ditemukan, silahkan coba lagi")
-
 #================================================================================================
 
 # jika piih NO. 6 (membuat fungsi delete_data) ---- function DELETE 
@@ -334,11 +332,10 @@ def delete_data(): #guru dapat menghapus data siswa ataupun ujian/tugas yang sud
                     print(f"Tugas {hapus_tugas} berhasil dihapus")
                 else:
                     print("Penghapusan batal")
-
-#===============================================
+#================================================================================================================================
 
 #eksekusi code
-#===============================================
+#================================================================================================================================
 login_awal()
 while True:
     menampilkan_menu_utama()
@@ -366,4 +363,4 @@ while True:
         else : 
             print("Terima kasih sudah menggunakan StudentHUB")
         break #keluar program
-#===============================================
+#==========================================================================================
